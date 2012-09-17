@@ -1,0 +1,9 @@
+<%= link_to "signup" ,'#',:onclick=>"sign_up()"%>
+<div id="signup"></div>
+<script type="text/javascript">
+  function sign_up()
+  {
+   alert('hiii');
+   $('#signup').html("<%=escape_javascript(render 'sign_up')%>")
+  }
+</script>

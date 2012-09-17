@@ -1,0 +1,17 @@
+<div id="signup_div">
+  <table>
+<%= form_for @user,:url=>{:action=>"new"} do |t|%>
+   <tr><td>User Name</td><td><%=t.text_field :username%></td></tr>
+        <tr><td>Password</td><td> <%=t.password_field :password %></td></tr>
+        <tr><td>Gender</td><td>Female<%=t.radio_button :gender, "1" ,:checked =>true%>
+         Male<%=t.radio_button :gender, "0"%></td></tr>
+        <tr><td>Email Id</td><td><%=t.email_field :email %></td></tr>
+        <tr><td>Date Of Birth</td><td><%=t.date_select :date_of_birth,:start_year => 1990 %></td></tr>
+        <tr><td>Mobile Number</td><td><%=t.telephone_field :phone_number%> </td></tr>
+        <!--<tr><td>Attach Resume</td><td> <%#= t.file_field :resume_attachement %>  </td></tr>-->
+        <tr><td>Term And Conditions</td><td><%= t.check_box :agree_term %> </td></tr>
+ <tr><td>Describe About Yourself </td><td><%=t.text_area :self_description %></td></tr>
+       <tr><td></td><td><%= t.submit "Save User" %></td> </tr>
+    <%end%>
+  </table>
+</div>
