@@ -1,6 +1,6 @@
 <div id="signup_div">
   <table>
-<%= form_for @user,:url=>{:action=>"new"} do |t|%>
+<%= form_for @user,:url=>{:action=>"new"},:remote=> true do |t|%>
    <tr><td>User Name</td><td><%=t.text_field :username%></td></tr>
         <tr><td>Password</td><td> <%=t.password_field :password %></td></tr>
         <tr><td>Gender</td><td>Female<%=t.radio_button :gender, "1" ,:checked =>true%>

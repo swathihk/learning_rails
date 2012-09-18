@@ -1,0 +1,12 @@
+<table align="center">
+<%=form_for @book do |i|%>
+   <tr><td>Book Name</td><td> <%= i.text_field :book_name%>  </td></tr>
+   <tr><td>Book Title</td><td> <%= i.text_field :book_title%>  </td></tr>
+      <tr><td>Book Author</td><td> <%= i.text_field :author%>  </td></tr>
+      <tr><td>Book ISBN</td><td> <%= i.text_field :book_isbn%>  </td></tr>
+      <tr><td>Book Pages</td><td> <%= i.text_field :pages%>  </td></tr>
+      <tr><td>Book Edition</td><td><%= i.text_field :edition_number %></td></tr>
+      <tr><td>Book Price</td><td><%= i.text_field :price %></td></tr>
+      <tr><td>Submit</td><td><%= i.submit "Save Book" %></td></tr>
+<%end%>
+</table>
