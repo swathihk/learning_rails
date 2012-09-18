@@ -5,7 +5,7 @@
 #    :port                 => 587,
 #    :domain               => "gmail.com",
 #    :user_name            => "eabyasinfo",
-#    :password             => "leooffice@",
+#    :password             => "********",
 #    :authentication       => "plain",
 #    :enable_starttls_auto => true
 #}
