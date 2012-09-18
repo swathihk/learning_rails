@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       @user=User.new(params[:user])
        respond_to do |format|
         if @user.save
-          UserMailer.registration_confirmation(@user).deliver
+          #UserMailer.registration_confirmation(@user).deliver
           flash[:notice] = "Welcome Successfully Created!"
           format.js {render :js=>"$('#signup').html('Successfully Created');"}
         end
